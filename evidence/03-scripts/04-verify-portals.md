@@ -35,4 +35,5 @@ Group membership evidence is in `evidence/02-groups`:
 
 - [DG-Sales members](../02-groups/02-dg-sales-members.md)
 - [DG-Operations members](../02-groups/03-dg-operations-members.md)
+- [DG-Finance members](../02-groups/05-dg-finance-members.md)
 - [SG-All-Staff members](../02-groups/04-sg-all-staff-members.md)

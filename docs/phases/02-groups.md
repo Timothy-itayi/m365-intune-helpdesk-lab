@@ -31,6 +31,7 @@ Step write-ups, in order:
 3. [DG-Sales members](../../evidence/02-groups/02-dg-sales-members.md)
 4. [DG-Operations members](../../evidence/02-groups/03-dg-operations-members.md)
 5. [SG-All-Staff members](../../evidence/02-groups/04-sg-all-staff-members.md)
+6. [DG-Finance members](../../evidence/02-groups/05-dg-finance-members.md)
 
 Screenshots:
 
@@ -39,8 +40,9 @@ Screenshots:
 - ![DG-Sales members](../../evidence/02-groups/images/dg-sales-members.png)
 - ![DG-Operations members](../../evidence/02-groups/images/dg-operations-members.png)
 - ![SG-All-Staff members](../../evidence/02-groups/images/sg-all-staff-members.png)
+- ![DG-Finance members](../../evidence/02-groups/images/dg-finance-members.png)
 
-The member screenshots were taken after the starters were created in [Phase 3](03-scripts.md). They show the dynamic rules working for `DG-Sales` and `DG-Operations`. `DG-Finance` has no membership screenshot yet.
+The member screenshots were taken after the starters were created in [Phase 3](03-scripts.md). They show the dynamic rules working for `DG-Sales`, `DG-Operations` and `DG-Finance`. The `DG-Operations` and `DG-Finance` rule syntax boxes are still not shown, only their results.
 
 ## Limits I noted
 

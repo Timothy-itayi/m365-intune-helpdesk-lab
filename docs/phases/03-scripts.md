@@ -33,7 +33,8 @@ Make joiner and leaver tasks fast, consistent and auditable.
 - Created six users across three departments (two each in Sales, Operations and Finance). Dynamic groups filled from the department. I did not time how long it took.
 - The Helpdesk Administrator role could reset Ava's password but could not create users.
 - Ran the leaver process on Ben Carter. The script reported every step, the admin center showed his sign-in as blocked, and the tenant report showed him disabled, unlicensed and in department `Leaver`.
-- A sign-in attempt as Ben in a private window gave "Your account or password is incorrect". That message is the same as a wrong password, so it does not prove the block by itself.
+- After the run, Ben dropped out of `DG-Sales` because his department changed. `DG-Finance` also shows Emma and Farid as expected.
+- A first sign-in attempt as Ben in a private window gave "Your account or password is incorrect", the same message as a wrong password. A second attempt gave "Your account has been locked. Contact your support person to unlock it, then try again." That is the sign-in error for the blocked account.
 
 ## Evidence
 
@@ -55,7 +56,9 @@ Key screenshots:
 ![Dry run and user creation](../../evidence/03-scripts/images/whatif-and-create-users.png)
 ![Users created](../../evidence/03-scripts/images/users-list.png)
 ![Leaver output](../../evidence/03-scripts/images/leaver-scripts-ben-carter.png)
+![Ben removed from DG-Sales](../../evidence/03-scripts/images/bens-removal-in-DG-Sales.png)
 ![Ben blocked in the admin center](../../evidence/03-scripts/images/admin-center-signin-blocked-ben-carter.png)
+![Ben's account locked at sign-in](../../evidence/03-scripts/images/ben-carter-locked-azure.png)
 ![Tenant report](../../evidence/03-scripts/images/tenant-report-scripts.png)
 
 Other screenshots are in the step write-ups. Group membership evidence is in [Phase 2](02-groups.md).
@@ -80,12 +83,6 @@ Other screenshots are in the step write-ups. Group membership evidence is in [Ph
 - Create the `logs/` folder in the script if it is missing, and write the log before creating the user, or print the password first.
 - Add new starters to `SG-All-Staff` in the script instead of by hand.
 - Log portal actions as well as script actions, so the helpdesk user and password resets show up in the action log.
-
-## Not shown
-
-- Ben's removal from `DG-Sales` after the leaver run.
-- `DG-Finance` membership.
-- Ben's failed sign-in in the Entra sign-in logs, which would show the actual failure reason.
 
 ## Checkpoint
 

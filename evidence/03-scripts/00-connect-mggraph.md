@@ -1,6 +1,6 @@
 # 3.2 Connect to Microsoft Graph
 
-Previous: [04-sg-all-staff-members.md](../02-groups/04-sg-all-staff-members.md)
+Previous: [05-dg-finance-members.md](../02-groups/05-dg-finance-members.md)
 
 Decision: [05-scripts.md](../../docs/decisions/05-scripts.md)
 

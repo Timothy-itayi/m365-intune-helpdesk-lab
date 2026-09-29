@@ -22,4 +22,4 @@ Expected: Chloe Martin and Dan Okafor.
 
 This also confirms the `DG-Operations` rule works, which no earlier screenshot showed.
 
-`DG-Finance` (Emma Rossi, Farid Haddad) has no screenshot yet.
+`DG-Finance` is in [05-dg-finance-members.md](05-dg-finance-members.md).
