@@ -25,8 +25,8 @@ Step-by-step evidence: [evidence/03-scripts](../evidence/03-scripts/00-connect-m
 | Script | Purpose | Status |
 | --- | --- | --- |
 | [New-Starter.ps1](New-Starter.ps1) | Create a user, set usage location, assign a licence, log the action | Run for six starters |
-| [Remove-Leaver.ps1](Remove-Leaver.ps1) | Offboard a user | Not run yet |
-| [Get-TenantReport.ps1](Get-TenantReport.ps1) | Export a user report and flag stale sign-ins | Not run yet |
+| [Remove-Leaver.ps1](Remove-Leaver.ps1) | Offboard a user | Run for Ben Carter |
+| [Get-TenantReport.ps1](Get-TenantReport.ps1) | Export a user report and flag stale sign-ins | Run once. `LastSignIn` was empty for everyone, so `StaleOrNever` is unreliable for now |
 
 ### New-Starter.ps1
 
@@ -46,6 +46,7 @@ Step-by-step evidence: [evidence/03-scripts](../evidence/03-scripts/00-connect-m
 - It fails if the user already exists, the licence SKU is missing, or no licences are free.
 - A random temporary password is printed once and is not logged. The user must change it at first sign-in.
 - It does not add the user to `SG-All-Staff`. That is still a manual step.
+- `-TicketRef` is not validated. A typo goes into the log as written, and the log is append-only.
 - Use `-WhatIf` for a dry run first.
 
 ### Remove-Leaver.ps1
@@ -59,9 +60,9 @@ In order, it:
 1. Blocks sign-in and revokes sessions.
 2. Sets the department to `Leaver`, so the dynamic groups drop the user.
 3. Removes all licences.
-4. Removes the user from assigned groups. Dynamic groups are skipped, because they cannot be edited by hand.
+4. Removes the user from every assigned group, including Microsoft 365 groups. Dynamic groups are skipped, because they cannot be edited by hand.
 
-It asks for confirmation by default (`ConfirmImpact = High`).
+It asks for confirmation by default (`ConfirmImpact = High`). `-WhatIf` prints a single line for the whole offboarding and does not list the steps. Evidence: [07-leaver-output.md](../evidence/03-scripts/07-leaver-output.md).
 
 ### Get-TenantReport.ps1
 
@@ -70,6 +71,8 @@ It asks for confirmation by default (`ConfirmImpact = High`).
 ```
 
 Writes `logs/tenant-report.csv` and prints a table, with stale or never-signed-in users first. Needs the `AuditLog.Read.All` scope for sign-in data.
+
+In the first run `LastSignIn` was empty for all users, including accounts that had signed in, so treat `StaleOrNever` with caution. Evidence: [09-tenant-report.md](../evidence/03-scripts/09-tenant-report.md).
 
 ## Action log
 

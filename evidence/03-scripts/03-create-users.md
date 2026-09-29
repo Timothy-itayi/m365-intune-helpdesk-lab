@@ -51,4 +51,4 @@ The passwords are blacked out in this screenshot.
 | Emma Rossi | Finance | Accounts Officer |
 | Farid Haddad | Finance | Finance Manager |
 
-The last command is cut off at the right edge of the terminal, so its ticket reference reads `INC-000` in the screenshot. This is where the screenshot ends, and the command was typed as `INC-0001`. The actions log screenshot ([05-actions-log.md](05-actions-log.md)) is cut off in the same place, so it cannot confirm the logged value.
+The last command is cut off at the right edge of the terminal, so its ticket reads `INC-000` in the screenshot. The actions log file confirms `INC-000` was what got logged for Farid, not `INC-0001` as in the steps above. See [05-actions-log.md](05-actions-log.md).

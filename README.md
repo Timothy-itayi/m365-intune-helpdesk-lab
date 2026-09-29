@@ -23,7 +23,7 @@ Each numbered file links to the one before it, so the trail reads in order from 
 | Setup | Done | [worklog](docs/worklog/setup-00.md) | [00-setup](evidence/00-setup/00.md) | [00.md](docs/decisions/00.md), [02-setup.md](docs/decisions/02-setup.md) |
 | 1: Tenant | Written up | [01-tenant.md](docs/phases/01-tenant.md) | [01-tenant](evidence/01-tenant/00-Secure-first-admin.md) | [03-tenant.md](docs/decisions/03-tenant.md) |
 | 2: Groups | Written up | [02-groups.md](docs/phases/02-groups.md) | [02-groups](evidence/02-groups/00-dg-sales-rule.md) | [04-groups.md](docs/decisions/04-groups.md) |
-| 3: Scripts | In progress | [03-scripts.md](docs/phases/03-scripts.md), [scripts/](scripts/README.md) | [03-scripts](evidence/03-scripts/00-connect-mggraph.md) | [05-scripts.md](docs/decisions/05-scripts.md) |
+| 3: Scripts | Written up | [03-scripts.md](docs/phases/03-scripts.md), [scripts/](scripts/README.md) | [03-scripts](evidence/03-scripts/00-connect-mggraph.md) | [05-scripts.md](docs/decisions/05-scripts.md) |
 | 4: Conditional Access | Not started | | | |
 | 5: Intune | Not started | | | |
 | 6: Device | Not started | | | |
@@ -44,6 +44,8 @@ PowerShell runs in a container, not on macOS. Build the image once, then enter i
 docker build --progress=plain -t m365-helpdesk-pwsh .
 docker run --rm -it -v "$PWD":/work m365-helpdesk-pwsh pwsh
 ```
+
+Type `exit` to leave the container. Closing it drops the Microsoft Graph session, so reconnect with the steps in [scripts/README.md](scripts/README.md).
 
 Details and verification: [evidence/00-setup/01.md](evidence/00-setup/01.md)
 
