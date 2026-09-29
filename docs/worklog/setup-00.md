@@ -1,6 +1,6 @@
 # Worklog: Setup
 
-Format follows the template in [worklog.md](../worklog.md). Newest phase last.
+Each entry has: time spent, what I did, what happened (including errors), what I learned, and what I'd change next time. Newest phase last.
 
 ## 2026-09-29 - Setup 00: osTicket and MariaDB
 
