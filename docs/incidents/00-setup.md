@@ -4,6 +4,8 @@
 **Service:** MariaDB / osTicket  
 **Issue Type:** Database Authentication Failure
 
+Related: [osTicket Lab Setup](../../evidence/00-setup/00.md) (setup and screenshots), [decisions](../decisions/00.md)
+
 ## Summary
 
 While setting up the osTicket project for a second time to continue using it as an IT support lab, osTicket was unable to connect to the MariaDB database.
