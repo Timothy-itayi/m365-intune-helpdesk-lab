@@ -10,7 +10,7 @@ Setup: MacBook + Docker Desktop.
 | --- | --- |
 | [docs/decisions](docs/decisions/README.md) | Why things were built the way they were, numbered in order |
 | [docs/incidents](docs/incidents/00-setup.md) | Incident reports: what broke, root cause, resolution, lessons learned |
-| [docs/worklog.md](docs/worklog.md) | Session-by-session log of what was done and learned |
+| [docs/worklog](docs/worklog/setup-00.md) | Session-by-session log of what was done and learned |
 | [evidence/00-setup](evidence/00-setup/00.md) | Setup write-ups with screenshots, numbered in order |
 
 Each numbered file links to the one before it, so the trail reads in order from `00`.
