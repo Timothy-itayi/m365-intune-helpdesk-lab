@@ -27,7 +27,7 @@ Each numbered file links to the one before it, so the trail reads in order from 
 | 4: Conditional Access | Not started | | | |
 | 5: Intune | Not started | | | |
 | 6: Device | Not started | | | |
-| 7: Incidents | Not started | | | |
+| 7: Incidents | In progress | [00-setup.md](docs/incidents/00-setup.md), [01-setup.md](docs/incidents/01-setup.md) | Screenshots in [00-setup](evidence/00-setup/00.md) and [01](evidence/00-setup/01.md) | Linked from each report |
 
 ### Setup trail
 
