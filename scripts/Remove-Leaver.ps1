@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS  Offboards a user: blocks sign-in, revokes sessions, removes licences and group memberships.
-.EXAMPLE   ./scripts/Remove-Leaver.ps1 -UserPrincipalName ben.carter@harbourco123.onmicrosoft.com -TicketRef INC-0004 -WhatIf
+.EXAMPLE   ./scripts/Remove-Leaver.ps1 -UserPrincipalName ben.carter@helpdeskco123.onmicrosoft.com -TicketRef INC-0004 -WhatIf
 #>
 #Requires -Version 7.0
 [CmdletBinding(SupportsShouldProcess, ConfirmImpact='High')]

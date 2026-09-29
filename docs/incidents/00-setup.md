@@ -57,6 +57,20 @@ MariaDB was then able to initialise a new `osticket` database and user using the
 
 The osTicket and MariaDB containers could then authenticate using the same `OST_DB_PASSWORD`.
 
+## Evidence
+
+The `Access denied` line above is quoted from the MariaDB log. There is no screenshot of the failure itself. The screenshots below show the state after the fix.
+
+Container logs after the successful install (`itops-osticket`, image `rinkp/osticket-dockerized:1.18.4`, port `8080:80`, `Successfully run installation.`):
+
+![osTicket container logs](../../evidence/00-setup/images/osticket-docker-image.png)
+
+Support Center reachable at `127.0.0.1:8080`, so osTicket connects to MariaDB:
+
+![osTicket Support Center home page](../../evidence/00-setup/images/osticket-webui.png)
+
+Full setup write-up: [evidence/00-setup/00.md](../../evidence/00-setup/00.md)
+
 ## Lessons Learned
 
 - Docker environment variables do not overwrite database credentials stored in an existing MariaDB volume.

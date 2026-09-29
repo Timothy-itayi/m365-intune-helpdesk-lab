@@ -28,13 +28,22 @@ Step write-ups, in order:
 
 1. [DG-Sales rule](../../evidence/02-groups/00-dg-sales-rule.md)
 2. [Groups list](../../evidence/02-groups/01-groups-list.md)
+3. [DG-Sales members](../../evidence/02-groups/02-dg-sales-members.md)
+4. [DG-Operations members](../../evidence/02-groups/03-dg-operations-members.md)
+5. [SG-All-Staff members](../../evidence/02-groups/04-sg-all-staff-members.md)
 
 Screenshots:
 
 - ![DG-Sales rule](../../evidence/02-groups/images/dg-sales-rules.png)
 - ![Groups list](../../evidence/02-groups/images/groups-list.png)
+- ![DG-Sales members](../../evidence/02-groups/images/dg-sales-members.png)
+- ![DG-Operations members](../../evidence/02-groups/images/dg-operations-members.png)
+- ![SG-All-Staff members](../../evidence/02-groups/images/sg-all-staff-members.png)
+
+The member screenshots were taken after the starters were created in [Phase 3](03-scripts.md). They show the dynamic rules working for `DG-Sales` and `DG-Operations`. `DG-Finance` has no membership screenshot yet.
 
 ## Limits I noted
 
 Dynamic membership can take several minutes to update. Dynamic groups can't be
-edited by hand, which matters for the leaver process.
+edited by hand, which matters for the leaver process. The leaver script handles this by
+setting the department to `Leaver` ([05-scripts.md](../decisions/05-scripts.md)).

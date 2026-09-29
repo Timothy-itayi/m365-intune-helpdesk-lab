@@ -6,5 +6,6 @@
 | [02-setup.md](02-setup.md) | PowerShell Docker image (native arm64 base) |
 | [03-tenant.md](03-tenant.md) | Tenant setup: admin MFA and break-glass account |
 | [04-groups.md](04-groups.md) | Dynamic and assigned groups |
+| [05-scripts.md](05-scripts.md) | Graph sign-in, starter and leaver scripts |
 
 Related: [incidents](../incidents/00-setup.md)
