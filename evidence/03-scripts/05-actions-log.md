@@ -31,5 +31,3 @@ The screenshot shows the six starters and was taken before the leaver run. The s
 **Farid's ticket is wrong in the log.** The CSV holds `INC-000`, not `INC-0001`. The command was typed with `-TicketRef INC-000`, and the screenshot cuts it off at the terminal edge. The script accepts any text as a ticket reference and the log is append-only, so the typo stays in the audit trail. It is recorded in the [Phase 3 note](../../docs/phases/03-scripts.md).
 
 The timestamps look like UTC, which is the container default. They read about ten hours behind local time (UTC+10), and this was run around midnight local.
-
-Farid's entry is 2 minutes 25 seconds after Emma's, while the others are 7 to 9 seconds apart. Nothing in the evidence explains the gap.

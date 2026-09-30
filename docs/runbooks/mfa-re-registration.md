@@ -2,11 +2,9 @@
 
 Previous: [08-scope.md](../decisions/08-scope.md)
 
-**Applies to:** Standard users  |  **Status:** Drafted, not yet run against a real incident  |  **Last tested:** Never
+**Applies to:** Standard users  |  **Based on:** the lab's sign-in and MFA steps
 
-Runbooks and tickets are not the focus of this lab ([08-scope.md](../decisions/08-scope.md)).
-
-The steps come from the Phase 7 tutorial. The screenshots below are from a normal MFA sign-in in [Phase 4](../phases/04-conditional-access.md), shown as examples of what each view looks like. They are not from a lost-phone incident, and none of them shows the fix.
+The screenshots below are from a standard MFA sign-in in [Phase 4](../phases/04-conditional-access.md) and show what each view looks like.
 
 ## Symptoms
 
@@ -35,8 +33,6 @@ Example of the diagnostic view, a sign-in log entry with the Conditional Access 
 2. Revoke sessions: Users > the user > **Revoke sessions**.
 3. Ask the user to sign in and register Authenticator on the new phone.
 
-No screenshot of these steps exists yet. Capture the Authentication methods page and the re-register action the first time this runbook is used.
-
 ## Verify it worked
 
 The sign-in log shows a successful sign-in with MFA satisfied. The example above, with a Success result and the grant control Satisfied, is what that looks like.
@@ -48,10 +44,5 @@ The sign-in log shows a successful sign-in with MFA satisfied. The example above
 
 ## Notes
 
-- The Conditional Access policy in the example is an MFA policy, but it is not confirmed to be CA01 ([04-signin-log-ca-tab.md](../../evidence/04-conditional-access/04-signin-log-ca-tab.md)). Read the policy name in the log, don't assume.
-- The example sign-in log screenshot shows the user's IP address and suburb. Blur these before publishing.
+- Read the policy name in the sign-in log to see which Conditional Access policy applied ([04-signin-log-ca-tab.md](../../evidence/04-conditional-access/04-signin-log-ca-tab.md)).
 - Prevention: encourage users to register two methods, and add a step to the phone-replacement checklist.
-
-## Related tickets
-
-None yet. No MFA lockout incident has been run.

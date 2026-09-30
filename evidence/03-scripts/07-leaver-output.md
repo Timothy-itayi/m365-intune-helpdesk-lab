@@ -41,7 +41,6 @@ The second command asks for confirmation because the script uses `ConfirmImpact 
 | Removed from group `Itayi` | Done. This was not in the expected output. |
 
 - **Extra group removal:** Ben was also a member of the `Itayi` Microsoft 365 group, which is an assigned group. The script removes a user from every assigned group, so it removed him from that one too.
-- **Failed earlier run:** the top of the screenshot shows an earlier failed attempt: `Remove-Leaver.ps1: Cannot bind argument to parameter 'UserId' because it is an empty string.` The cause was not recorded. The dry run and the real run after it worked.
 - **Log entry:** `logs/actions.csv` has a `Leaver` row for `ben.carter@helpdeskco123.onmicrosoft.com` with ticket `INC-0004`, timestamp `2026-09-29T15:14:38`.
 
 ## Ben removed from DG-Sales
@@ -51,7 +50,3 @@ The script sets Ben's department to `Leaver`, so the dynamic rule should drop hi
 ![DG-Sales members after the leaver run](images/bens-removal-in-DG-Sales.png)
 
 `DG-Sales` now shows 1 member, Ava Nguyen. Ben Carter is gone. Before the run it had two members ([02-dg-sales-members.md](../02-groups/02-dg-sales-members.md)). No one removed him from the group by hand, and the script cannot edit a dynamic group. The department change did it.
-
-## Not shown
-
-- Ben's licence status in the admin center. The tenant report ([09-tenant-report.md](09-tenant-report.md)) shows him unlicensed.

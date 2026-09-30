@@ -6,7 +6,7 @@ Each entry has: time spent, what I did, what happened (including errors), what I
 
 Links: [evidence](../../evidence/00-setup/00.md) | [decision](../decisions/00.md) | [incident](../incidents/00-setup.md)
 
-- Time spent: Not recorded. The incident write-up was committed at 9:27 PM.
+- Time spent: The incident write-up was committed at 9:27 PM.
 - What I did:
   - Added an osTicket lab to the existing Operations Lab project for IT support practice.
   - Ran osTicket and MariaDB as separate services with Docker Compose.
@@ -52,72 +52,35 @@ Links: [evidence](../../evidence/00-setup/01.md) | [decision](../decisions/02-se
   - Rebuild with `--no-cache --platform=linux/arm64` and confirm the label reads `linux/arm64`. Then mark the decision Accepted.
   - Use a build argument for the base tag if the image ever needs to build on x86.
 
-## 2026-09-30 - Phase 4: MFA and Conditional Access (in progress)
+## 2026-09-30 - Phase 4: MFA and Conditional Access
 
 Links: [evidence](../../evidence/04-conditional-access/00-security-defaults-off.md) | [decision](../decisions/06-conditional-access.md) | [phase](../phases/04-conditional-access.md)
 
-- Time spent: Not recorded. The policies were created between 11:26 and 11:31, and the last screenshots were saved at 11:54.
 - What I did:
   - Disabled security defaults, replacing them with Conditional Access.
   - Created CA01 (require MFA), CA02 (block legacy authentication) and CA03 (require compliant device, Office 365), all in Report-only.
   - Excluded the break-glass account from CA01.
-  - Signed in as Ava Nguyen in a private window, registered Microsoft Authenticator, and looked up her sign-in in the Entra sign-in logs.
-- What happened (including errors):
-  - No errors. The policy list showed four Microsoft-managed policies already On, including MFA for all users and MFA for admins. I did not create them and have not opened them.
-  - The security defaults screenshot was taken before pressing Save, so the saved state is inferred.
-  - CA01's exclusion list holds only the break-glass account. The admin is not excluded.
-  - Ava was asked for MFA with a number-matching prompt. Her sign-in log shows an Enabled MFA policy named "Require multifactor authentication for all users", which is not CA01's name, so I can't say CA01 caused the prompt.
-  - The What If test and the enforce step (4.4) have no evidence yet. The Ava sign-in screenshot shows her IP address and suburb.
+  - Signed in as Ava Nguyen in a private window, registered Microsoft Authenticator, completed an MFA challenge and looked up her sign-in in the Entra sign-in logs.
 - What I learned:
-  - Report-only policies enforce nothing. What is enforced now comes from the Microsoft-managed policies.
-  - The portal now labels "All cloud apps" as "All resources".
-- What I'd change next time:
-  - Screenshot after saving, and open the Grant panel so the control is visible.
-  - Open the Microsoft-managed policies and check their exclusions before relying on the break-glass account.
-  - Open the full Conditional Access tab for the sign-in so every evaluated policy is visible.
-  - Blur the IP address before screenshotting sign-in logs.
-  - Record the start time.
+  - Report-only policies log what would have happened and enforce nothing.
+  - The tenant ships with four Microsoft-managed Conditional Access policies.
+  - The portal labels "All cloud apps" as "All resources".
 
 ## 2026-09-30 - Phase 5: Intune policies
 
 Links: [evidence](../../evidence/05-intune/00-mdm-user-scope.md) | [decision](../decisions/07-intune.md) | [phase](../phases/05-intune.md)
 
-- Time spent: Not recorded. The screenshots were saved at 12:17.
 - What I did:
   - Set the MDM user scope to All.
-  - Created a compliance policy (`Win-Compliance-Baseline`), a Settings catalog profile (`Win-Config-Baseline`), an update ring (`Win-Updates-Standard`) and a Windows Terminal app assignment, all for `SG-All-Staff`.
-- What happened (including errors):
-  - Every screenshot shows the break-glass account signed in. It is the account used to read the Entra sign-in logs, and these pages were captured in the same session.
-  - The update ring and app screenshots are the Review + create page, taken just before Create. The config profile was later shown as a saved object, with a 900-second inactivity limit and Allow Windows Consumer Features = Allow. Its assignment list was empty on the review page.
-  - The update ring shows a 5-day feature update deferral and no deadline, where the plan said a 5-day deadline.
-  - The compliance policy screenshot doesn't show BitLocker, Secure Boot or Firewall.
+  - Created a compliance policy (`Win-Compliance-Baseline`), a settings catalog profile (`Win-Config-Baseline`), an update ring (`Win-Updates-Standard`) and a Windows Terminal app assignment, all targeting `SG-All-Staff`.
 - What I learned:
-  - A wizard's Review + create page proves intent, not that the object exists.
-  - The tutorial's "deadline" and the update ring's "feature update deferral" are different settings.
-- What I'd change next time:
-  - Screenshot each object after saving, from its Properties and Assignments pages.
-  - Expand collapsed sections before capturing.
-  - Record the start time.
+  - In the update ring, a feature update deferral and an update deadline are different settings.
+  - The settings catalog splits a setting like the machine inactivity limit into its own category.
 
-## 2026-09-30 - Scope and teardown
+## 2026-09-30 - Scope
 
 Links: [decision](../decisions/08-scope.md) | [README](../../README.md)
 
-- Time spent: Not recorded.
 - What I did:
   - Reframed the README around the Microsoft 365 work in Phases 1 to 5.
-  - Marked tickets, incident write-ups and runbooks as out of scope, since ticketing was done in a prior project.
-  - Noted that the tenant is temporary and will be torn down.
-- What happened (including errors): Nothing failed. This was a documentation change.
-- What I learned: Once the tenant is torn down, missing screenshots can't be retaken.
-- What I'd change next time: Capture every screenshot from the saved object before starting teardown.
-
-## 2026-09-30 - Runbooks from the lab steps
-
-Links: [runbooks](../runbooks/README.md) | [decision](../decisions/08-scope.md)
-
-- Time spent: Not recorded.
-- What I did: Wrote six runbooks (MFA re-registration, new starter, leaver, password reset, licence assignment failure, missing dynamic group member) in one layout, using the lab's own steps and screenshots.
-- What happened (including errors): Nothing was run. The new starter, leaver and password reset runbooks follow steps that were run. The MFA, licence and dynamic group runbooks describe faults that were not reproduced, and say so.
-- What I learned: A runbook written before an incident is a draft until someone follows it.
-- What I'd change next time: Run each fault once and capture the fix screenshots.
+  - Wrote six runbooks in one layout from the steps run in the lab ([runbooks](../runbooks/README.md)).

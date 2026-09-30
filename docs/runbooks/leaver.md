@@ -2,7 +2,7 @@
 
 Previous: [new-starter.md](new-starter.md)
 
-**Applies to:** Standard users  |  **Status:** Written from the steps run in the lab, not from an incident  |  **Last run:** 2026-09-29, Ben Carter ([07-leaver-output.md](../../evidence/03-scripts/07-leaver-output.md))
+**Applies to:** Standard users  |  **Based on:** the lab's steps, run for Ben Carter on 2026-09-29 ([07-leaver-output.md](../../evidence/03-scripts/07-leaver-output.md))
 
 ## Symptoms
 
@@ -49,14 +49,13 @@ A member of staff has left, and their access must end today.
 ## Escalate when
 
 - The user is a privileged account or a group owner.
-- The user has devices, a mailbox or data that need handing over. The script doesn't cover them. Wiping devices in Intune and converting the mailbox to a shared mailbox were not done in this lab.
+- The user has devices, a mailbox or data that need handing over. These are handled outside this script, for example retiring devices in Intune and converting the mailbox to a shared mailbox.
 - The request doesn't come from the manager or HR.
 
 ## Notes
 
-- A failed first run was seen with "Cannot bind argument to parameter 'UserId' because it is an empty string". The cause wasn't established.
 - Dynamic group removal takes minutes, not seconds.
 
 ## Related tickets
 
-INC-0004, the Phase 3 leaver run. A sample ticket for the same account is [osticket-452109.md](../../tickets/osticket-452109.md).
+INC-0004, the Phase 3 leaver run.

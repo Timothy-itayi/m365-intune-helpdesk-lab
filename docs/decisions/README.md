@@ -9,6 +9,6 @@
 | [05-scripts.md](05-scripts.md) | Graph sign-in, starter and leaver scripts |
 | [06-conditional-access.md](06-conditional-access.md) | Security defaults and Conditional Access policies (Report-only) |
 | [07-intune.md](07-intune.md) | MDM scope, compliance, configuration, update ring and app assignment |
-| [08-scope.md](08-scope.md) | Focus on Phases 1 to 5, temporary tenant, tickets out of scope |
+| [08-scope.md](08-scope.md) | Focus on Phases 1 to 5, temporary tenant, runbooks |
 
 Related: [incidents](../incidents/00-setup.md)

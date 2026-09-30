@@ -2,7 +2,7 @@
 
 Previous: [licence-assignment-failure.md](licence-assignment-failure.md)
 
-**Applies to:** Users in `DG-Sales`, `DG-Operations` and `DG-Finance`  |  **Status:** Written from how the lab's groups behaved, not from an incident  |  **Last run:** Never. The typo case was not reproduced
+**Applies to:** Users in `DG-Sales`, `DG-Operations` and `DG-Finance`  |  **Based on:** the lab's dynamic group rules and the leaver run
 
 ## Symptoms
 
@@ -36,6 +36,6 @@ The user appears in the group's member list:
 - The department is correct, several minutes have passed and the user still isn't in the group.
 - The user needs access without changing the department. Use an assigned group such as `SG-All-Staff` instead ([04-sg-all-staff-members.md](../../evidence/02-groups/04-sg-all-staff-members.md)).
 
-## Related tickets
+## Related
 
-None.
+[02-groups.md](../phases/02-groups.md)

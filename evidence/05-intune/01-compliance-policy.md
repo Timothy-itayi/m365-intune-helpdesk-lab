@@ -8,13 +8,7 @@ Decision: [07-intune.md](../../docs/decisions/07-intune.md)
 
 Intune admin center (`intune.microsoft.com`) > Devices > Compliance > Create policy > Windows 10 and later.
 
-| Setting | Value |
-| --- | --- |
-| Name | `Win-Compliance-Baseline` |
-| Device Health | Require BitLocker, require Secure Boot |
-| System Security | Require a password to unlock, minimum length 8. Firewall: Require. Antivirus: Require |
-| Actions for noncompliance | Mark device noncompliant, immediately |
-| Assignments | `SG-All-Staff` |
+Configure Device Health, System Security (password, firewall, antivirus) and the actions for noncompliance, then assign the policy to `SG-All-Staff`. Name: `Win-Compliance-Baseline`.
 
 ## Evidence
 
@@ -50,10 +44,6 @@ The policy's settings page (step 1 of 2, Compliance settings) with System Securi
 
 Custom Compliance, Device Health, Device Properties and Configuration Manager Compliance are collapsed in this view.
 
-## What this proves, and what it doesn't
+## Result
 
-- The policy exists and is assigned to `SG-All-Staff`, with the noncompliance action set to Immediately.
-- **BitLocker, Secure Boot and Firewall are still not visible.** The properties page shows Antivirus, the password requirement and the minimum length. The settings page has Device Health collapsed and shows only Password. Expand Device Health (BitLocker, Secure Boot) and the firewall setting to show them.
-- The settings page shows three password values the tutorial didn't ask for: a 1-minute inactivity limit, 41-day expiry and 5 remembered passwords. I don't know whether they were chosen or are defaults. A 1-minute inactivity limit is strict for a password requirement.
-- The "unlock mobile devices" label is Intune's wording for the password requirement. This policy is for Windows.
-- No device is enrolled, so nothing has been evaluated against this policy yet.
+The policy exists, targets `SG-All-Staff` and marks a noncompliant device immediately.

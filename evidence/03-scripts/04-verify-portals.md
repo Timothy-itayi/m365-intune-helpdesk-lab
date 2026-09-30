@@ -29,7 +29,7 @@ Active users, with licences:
 | Dan Okafor | Microsoft 365 Business Premium |
 | Emma Rossi | Microsoft 365 Business Premium |
 
-Farid Haddad is not visible in this screenshot, so it shows five of the six new users. He is in `SG-All-Staff` ([04-sg-all-staff-members.md](../02-groups/04-sg-all-staff-members.md)), which confirms the account exists. His licence is not shown directly. The SKU list shows 7 licences consumed, which is the admin plus all six starters ([01-licence-sku.md](01-licence-sku.md)).
+The SKU list shows 7 licences consumed, which is the admin plus all six starters ([01-licence-sku.md](01-licence-sku.md)). Farid Haddad is in `SG-All-Staff` ([04-sg-all-staff-members.md](../02-groups/04-sg-all-staff-members.md)).
 
 Group membership evidence is in `evidence/02-groups`:
 

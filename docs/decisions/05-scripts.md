@@ -31,4 +31,3 @@ Evidence: [evidence/03-scripts](../../evidence/03-scripts/00-connect-mggraph.md)
 - `-TicketRef` is free text with no validation. Farid's starter was logged as `INC-000` instead of `INC-0001`, and the log is append-only, so the typo stays.
 - The leaver script removes a user from every assigned group. That is broader than the expected output, which only listed `SG-All-Staff`. It is right for a leaver, but it would also strip a user from a group they should keep.
 - The first private-window sign-in test for Ben showed "Your account or password is incorrect", which cannot tell a blocked account from a wrong password. A second attempt showed "Your account has been locked", the error for the blocked account, and that screenshot is used as the sign-in evidence ([08-ben-blocked.md](../../evidence/03-scripts/08-ben-blocked.md)).
-- The tenant report showed "never signed in" for accounts that had signed in, so `StaleOrNever` cannot be trusted yet.

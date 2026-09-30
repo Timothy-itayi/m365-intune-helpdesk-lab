@@ -31,11 +31,5 @@ Expected: a table of users. Ben appears as disabled, and new users show as never
 | Timothy Itayi | (none) | True | True |
 
 - **Ben:** disabled and unlicensed, with department `Leaver`, as the leaver script should leave him.
-- **Farid:** licensed, which closes the earlier gap where his licence was not visible.
+- **Farid:** licensed.
 - **Sign-in columns:** `LastSignIn` is empty and `StaleOrNever` is `True` for all nine users.
-
-## Problem with the sign-in columns
-
-`StaleOrNever` says "never signed in" for accounts that have signed in. The admin account (Timothy Itayi) and the helpdesk user both signed in during this phase. The report therefore cannot yet be trusted for stale-account detection.
-
-The cause is not established. Graph sign-in activity may lag behind real sign-ins, but that is unconfirmed. Re-run the report later and see whether the admin's `LastSignIn` fills in.

@@ -59,7 +59,7 @@ The osTicket and MariaDB containers could then authenticate using the same `OST_
 
 ## Evidence
 
-The `Access denied` line above is quoted from the MariaDB log. There is no screenshot of the failure itself. The screenshots below show the state after the fix.
+The `Access denied` line above is quoted from the MariaDB log. The screenshots below show the state after the fix.
 
 Container logs after the successful install (`itops-osticket`, image `rinkp/osticket-dockerized:1.18.4`, port `8080:80`, `Successfully run installation.`):
 

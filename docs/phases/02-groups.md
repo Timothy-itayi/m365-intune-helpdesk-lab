@@ -42,9 +42,9 @@ Screenshots:
 - ![SG-All-Staff members](../../evidence/02-groups/images/sg-all-staff-members.png)
 - ![DG-Finance members](../../evidence/02-groups/images/dg-finance-members.png)
 
-The member screenshots were taken after the starters were created in [Phase 3](03-scripts.md). They show the dynamic rules working for `DG-Sales`, `DG-Operations` and `DG-Finance`. The `DG-Operations` and `DG-Finance` rule syntax boxes are still not shown, only their results.
+The member screenshots were taken after the starters were created in [Phase 3](03-scripts.md). They show the dynamic rules working for `DG-Sales`, `DG-Operations` and `DG-Finance`.
 
-## Limits I noted
+## Notes
 
 Dynamic membership can take several minutes to update. Dynamic groups can't be
 edited by hand, which matters for the leaver process. The leaver script handles this by

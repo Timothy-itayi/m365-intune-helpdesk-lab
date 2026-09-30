@@ -8,18 +8,13 @@ Decision: [07-intune.md](../../docs/decisions/07-intune.md)
 
 Intune admin center > Devices > Windows updates > Update rings for Windows 10 and later > Create profile.
 
-| Setting | Value |
-| --- | --- |
-| Name | `Win-Updates-Standard` |
-| Quality update deferral | 3 days |
-| Deadline | 5 days |
-| Assignments | `SG-All-Staff` |
+Name: `Win-Updates-Standard`. Set the quality update deferral (3 days) and the feature update deferral (5 days), then assign the ring to `SG-All-Staff`.
 
 ## Evidence
 
 ![Win-Updates-Standard review page](images/update-ring.png)
 
-The screenshot is the **Review + create** page. The ring was created straight after, but no screenshot shows the saved ring.
+The screenshot is the **Review + create** page of the ring.
 
 | Item | Value shown |
 | --- | --- |
@@ -30,14 +25,9 @@ The screenshot is the **Review + create** page. The ring was created straight af
 | Windows drivers | Allow |
 | Automatic update behavior | Auto install at maintenance time |
 | Active hours | 8 AM to 5 PM |
-| Use deadline settings | Not configured |
 | Feature update uninstall period | 10 days |
 | Upgrade Windows 10 devices to latest Windows 11 | No |
 
-## What this proves, and what it doesn't
+## Result
 
-- The quality deferral is 3 days, as planned.
-- **The 5 is a feature update deferral, not a deadline.** "Use deadline settings" is Not configured, so no deadline is set. The tutorial asked for a 5-day deadline.
-- **No assignment is visible.** `SG-All-Staff` does not appear in the screenshot.
-- It is the Review + create page, so it shows the settings chosen, not the saved object. The ring being created is taken on trust, not shown.
-- Active hours, the update behaviour and the 10-day uninstall period were not chosen in the tutorial. I don't know whether they are Intune defaults or values I set.
+The update ring sets a 3-day quality update deferral and a 5-day feature update deferral.

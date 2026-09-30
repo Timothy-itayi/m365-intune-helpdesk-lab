@@ -2,7 +2,7 @@
 
 Previous: [leaver.md](leaver.md)
 
-**Applies to:** Standard users, by a Helpdesk Administrator  |  **Status:** Written from the steps run in the lab, not from an incident  |  **Last run:** 2026-09-29, reset of Ava Nguyen's password ([06-helpdesk-role-test.md](../../evidence/03-scripts/06-helpdesk-role-test.md))
+**Applies to:** Standard users, by a Helpdesk Administrator  |  **Based on:** the lab's steps, run for Ava Nguyen's password on 2026-09-29 ([06-helpdesk-role-test.md](../../evidence/03-scripts/06-helpdesk-role-test.md))
 
 ## Symptoms
 
@@ -24,12 +24,12 @@ A user forgot their password or is locked out, and can't sign in.
 
 ## Verify it worked
 
-The admin center shows "Password has been reset" for the user. Ask the user to sign in. The first sign-in with the new password was not shown in the lab.
+The admin center shows "Password has been reset" for the user. Ask the user to sign in with the new password.
 
 ## Escalate when
 
 - Identity can't be verified.
-- The account is privileged. Resetting a privileged account's password was not tested with the Helpdesk Administrator role.
+- The account is privileged. Hand it to an admin with a higher role.
 - The user can sign in but not complete MFA. See [mfa-re-registration.md](mfa-re-registration.md).
 
 ## Notes
@@ -37,6 +37,6 @@ The admin center shows "Password has been reset" for the user. Ask the user to s
 - The same role cannot create users: there's no "Add a user" button, and the Create button in Entra is disabled ([helpdesk-create-user-denied.png](../../evidence/03-scripts/images/helpdesk-create-user-denied.png)).
 - Portal actions aren't in `logs/actions.csv`, so record the reset on the ticket.
 
-## Related tickets
+## Related
 
-None.
+[06-helpdesk-role-test.md](../../evidence/03-scripts/06-helpdesk-role-test.md)

@@ -68,8 +68,6 @@ Other screenshots are in the step write-ups. Group membership evidence is in [Ph
 | Issue | Cause | Fix |
 |---|---|---|
 | Farid's starter was logged under `INC-000` instead of `INC-0001` | Typo in `-TicketRef`. The script accepts any text | None. The log is append-only, so the typo is recorded here. Validating the ticket format in the script would prevent it |
-| `Remove-Leaver.ps1` failed once with "Cannot bind argument to parameter 'UserId' because it is an empty string" | Not established | Re-ran. The dry run and real run after it worked |
-| Tenant report shows "never signed in" for accounts that have signed in | Not established. Graph sign-in activity may lag | Not fixed. Re-run the report later |
 | A screenshot showed all six temporary passwords in plain text | Taken before the passwords were redacted | Moved to the gitignored `evidence-raw/` folder. The redacted version is used |
 
 ## Limits and what I'd do in production

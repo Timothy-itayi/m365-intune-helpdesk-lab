@@ -40,9 +40,3 @@ New user page in the Entra admin center, with the Create button disabled.
 | Role | Helpdesk Administrator |
 
 The account was created in the portal, not with `New-Starter.ps1`, so it is not in `logs/actions.csv`. The password reset was also done in the portal and is not logged.
-
-## Not shown
-
-- The first sign-in with the temporary password and the forced password change.
-- The Helpdesk Administrator role assignment on the user's Manage roles page.
-- A test of resetting a privileged account's password. This test used a standard user only.

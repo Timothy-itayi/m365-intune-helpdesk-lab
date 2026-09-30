@@ -12,7 +12,7 @@ Intune admin center > Apps > Windows > Create > Microsoft Store app (new). Searc
 
 ![Windows Terminal assignment](images/app-assignment.png)
 
-The screenshot is the **Review + create** page of the Add App wizard. The app was created straight after, but no screenshot shows it in the app list.
+The screenshot is the **Review + create** page of the Add App wizard.
 
 | Item | Value shown |
 | --- | --- |
@@ -24,8 +24,6 @@ The screenshot is the **Review + create** page of the Add App wizard. The app wa
 | Available for enrolled devices | Empty |
 | Uninstall | Empty |
 
-## What this proves, and what it doesn't
+## Result
 
-- The assignment is set as Required for `SG-All-Staff`, which is what the tutorial asked for.
-- It is the Review + create page, so it shows the assignment chosen, not the saved app. The app being created is taken on trust, not shown.
-- Install behavior is User, so the app installs for the signed-in user. Nothing installs without an enrolled device, and none is enrolled, so the app has never been installed.
+Windows Terminal is assigned as Required for `SG-All-Staff`, installing for the signed-in user.

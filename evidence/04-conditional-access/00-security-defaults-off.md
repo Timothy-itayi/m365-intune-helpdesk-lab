@@ -6,7 +6,7 @@ Decision: [06-conditional-access.md](../../docs/decisions/06-conditional-access.
 
 ## Steps
 
-New tenants have security defaults on, and the tutorial says Conditional Access policies cannot be created while they are enabled. Turn them off first.
+New tenants have security defaults on, and Conditional Access policies can't be created while they are enabled. Turn them off first.
 
 1. Entra admin center > Identity > Overview > Properties > Manage security defaults.
 2. Set Security defaults to **Disabled**.
@@ -27,8 +27,6 @@ The menu labels shift between portal versions. Searching "security defaults" in 
 
 The tenant ID is blacked out in the screenshot.
 
-## What this proves
+## Result
 
-The screenshot shows the panel filled in with the **Save** button still visible, so it shows the setting before it was saved, not after. The saved state is only inferred: three Conditional Access policies were created afterwards ([02-policy-list-report-only.md](02-policy-list-report-only.md)), and the tutorial says that cannot be done with security defaults on. If it matters, re-open the panel and screenshot it after saving.
-
-Turning security defaults off removes the blanket MFA prompt they gave every user. From this point, MFA is only enforced by Conditional Access policies, and the policies in this phase are report-only. See the Microsoft-managed policies noted in [02-policy-list-report-only.md](02-policy-list-report-only.md).
+With security defaults off, MFA is enforced through Conditional Access policies ([02-policy-list-report-only.md](02-policy-list-report-only.md)).

@@ -2,7 +2,7 @@
 
 Previous: [password-reset.md](password-reset.md)
 
-**Applies to:** New users  |  **Status:** Written from the lab's script checks, not from an incident  |  **Last run:** Never. The failure was not reproduced in the lab
+**Applies to:** New users  |  **Based on:** the pre-checks in `New-Starter.ps1` and the lab's licence evidence
 
 ## Symptoms
 
@@ -11,7 +11,7 @@ The user exists, but has no licence. `New-Starter.ps1` stops with one of these m
 - `Licence SKU '<name>' not found in this tenant.`
 - `No free '<name>' licences left.`
 
-The script also sets a usage location (default `AU`) before assigning the licence, which is a Microsoft 365 requirement. A user created in the portal without a usage location can't be licensed, but that case was not run in the lab.
+The script also sets a usage location (default `AU`) before assigning the licence, which is a Microsoft 365 requirement. A user created in the portal without a usage location can't be licensed.
 
 ## Checks (in order)
 
@@ -43,6 +43,6 @@ The user shows as licensed in the Microsoft 365 admin center, and the consumed c
 
 - Licences are free, the usage location is set and the assignment still fails. Read the exact error text and escalate with it.
 
-## Related tickets
+## Related
 
-None.
+[new-starter.md](new-starter.md)

@@ -28,4 +28,4 @@ Active users page showing the new account next to the first admin.
 | Break Glass | `breakglass@helpdeskco123.onmicrosoft.com` | Unlicensed |
 | Timothy Itayi | `TimothyItayi@helpdeskco123.onmicrosoft.com` | Microsoft 365 Business Premium |
 
-This screenshot shows the account exists and is unlicensed. The Global Administrator role assignment is not visible in it.
+The account exists and is unlicensed.

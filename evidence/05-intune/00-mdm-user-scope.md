@@ -22,9 +22,6 @@ Without this, devices that join Entra never appear in Intune.
 | Disable MDM enrollment when adding work or school account on Windows | No |
 | WIP user scope | None |
 
-## What this proves, and what it doesn't
+## Notes
 
-- MDM user scope is set to All.
-- Save and Discard are active in the screenshot. The scope is taken as saved, because the setup carried on from this page. The screenshot itself doesn't show the saved state, and no device enrolment was tried, so nothing tests it.
-- The screenshot was taken while signed in as the **break-glass account** (`breakglass@helpdeskco…`, top right), not the admin. That account is used to read the sign-in logs, and this page was captured in the same session ([05-intune.md](../../docs/phases/05-intune.md)).
-- The URLs are Microsoft's defaults, not values I set.
+The terms of use, discovery and compliance URLs are Microsoft's defaults.

@@ -2,7 +2,7 @@
 
 Previous: [mfa-re-registration.md](mfa-re-registration.md)
 
-**Applies to:** New staff in Sales, Operations or Finance  |  **Status:** Written from the steps run in the lab, not from an incident  |  **Last run:** 2026-09-29, six starters ([03-create-users.md](../../evidence/03-scripts/03-create-users.md))
+**Applies to:** New staff in Sales, Operations or Finance  |  **Based on:** the lab's steps, run for six starters on 2026-09-29 ([03-create-users.md](../../evidence/03-scripts/03-create-users.md))
 
 ## Symptoms
 
@@ -48,8 +48,8 @@ A new member of staff needs an account, a licence and the right groups before th
 
 ## Notes
 
-- `-TicketRef` is not validated. One starter was logged as `INC-000` instead of `INC-0001`, and the log is append-only. Check it before pressing Enter.
+- `-TicketRef` is free text and the log is append-only, so check the reference before pressing Enter.
 
-## Related tickets
+## Related
 
-None. The six starters were a batch, not incidents.
+[scripts/README.md](../../scripts/README.md)
