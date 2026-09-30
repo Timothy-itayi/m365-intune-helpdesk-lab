@@ -8,7 +8,7 @@ Status: In progress. Steps 4.1 to 4.3 have evidence, with gaps. Step 4.4 (enforc
 
 ## Objective
 
-Require MFA and block weak sign-in methods without locking anyone out, and prepare a device compliance policy for Phase 6.
+Require MFA and block weak sign-in methods without locking anyone out, and prepare a device compliance policy. Phase 6 was skipped ([06-device.md](06-device.md)), so that policy was never enforced.
 
 ## Policies
 
@@ -16,7 +16,7 @@ Require MFA and block weak sign-in methods without locking anyone out, and prepa
 |---|---|---|---|
 | CA01 Require MFA - All users | All users, excluding break-glass | Require multifactor authentication | Report-only |
 | CA02 Block legacy authentication | All users, excluding break-glass | Block Exchange ActiveSync and other legacy clients | Report-only |
-| CA03 Require compliant device - Office 365 | `SG-All-Staff`, excluding break-glass and the admin | Require a compliant device | Report-only until Phase 6 |
+| CA03 Require compliant device - Office 365 | `SG-All-Staff`, excluding break-glass and the admin | Require a compliant device | Report-only, permanently (Phase 6 skipped) |
 
 ## Method
 
@@ -27,7 +27,7 @@ Every policy started in Report-only. Ava Nguyen, a standard user, then signed in
 - **Security defaults off first.** Conditional Access replaces them, and the two cannot be used together.
 - **Report-only for everything.** Nothing is enforced by the new policies until the sign-in logs show what each would have done.
 - **Break-glass excluded.** This is the reason the account exists ([Phase 1](01-tenant.md)).
-- **CA03 waits for Phase 6.** No devices are enrolled yet, so requiring compliance now would lock out `SG-All-Staff`.
+- **CA03 stays Report-only.** The plan was to wait for Phase 6, but that phase was skipped and no device is enrolled, so requiring compliance would lock out `SG-All-Staff`.
 
 ## Results
 

@@ -88,8 +88,7 @@ Links: [evidence](../../evidence/05-intune/00-mdm-user-scope.md) | [decision](..
   - Created a compliance policy (`Win-Compliance-Baseline`), a Settings catalog profile (`Win-Config-Baseline`), an update ring (`Win-Updates-Standard`) and a Windows Terminal app assignment, all for `SG-All-Staff`.
 - What happened (including errors):
   - Every screenshot shows the break-glass account signed in. It is the account used to read the Entra sign-in logs, and these pages were captured in the same session.
-  - The config profile, update ring and app screenshots are the Review + create page, before Create. The MDM scope screenshot was also taken before Save.
-  - The config profile shows Allow Windows Consumer Features = Allow and an empty assignment list. The inactivity limit is in a collapsed section, so it isn't visible.
+  - The update ring and app screenshots are the Review + create page, taken just before Create. The config profile was later shown as a saved object, with a 900-second inactivity limit and Allow Windows Consumer Features = Allow. Its assignment list was empty on the review page.
   - The update ring shows a 5-day feature update deferral and no deadline, where the plan said a 5-day deadline.
   - The compliance policy screenshot doesn't show BitLocker, Secure Boot or Firewall.
 - What I learned:
@@ -99,3 +98,40 @@ Links: [evidence](../../evidence/05-intune/00-mdm-user-scope.md) | [decision](..
   - Screenshot each object after saving, from its Properties and Assignments pages.
   - Expand collapsed sections before capturing.
   - Record the start time.
+
+## 2026-09-30 - Phase 6: Enrol a Windows device (skipped)
+
+Links: [phase](../phases/06-device.md) | [decision](../decisions/08-device-enrolment-skipped.md)
+
+- Time spent: None. The phase was not attempted.
+- What I did:
+  - Decided to skip Phase 6 because there is no Windows machine to use.
+  - Updated the README, the phase notes and the decision logs to say device enrolment was not tested and why.
+- What happened (including errors): Nothing was run, so nothing failed.
+- What I learned:
+  - Docker on macOS can't stand in for a Windows desktop, so a Mac-only lab can't cover Intune enrolment.
+  - Skipping leaves the Phase 5 policies as configuration only, and CA03 stuck in Report-only.
+- What I'd change next time: Check for a usable Windows device before starting the Intune phases, or plan a Windows VM route.
+
+## 2026-09-30 - Scope and teardown
+
+Links: [decision](../decisions/09-scope.md) | [README](../../README.md)
+
+- Time spent: Not recorded.
+- What I did:
+  - Reframed the README around the Microsoft 365 work in Phases 1 to 5.
+  - Marked tickets, incident write-ups and runbooks as out of scope, since ticketing was done in a prior project.
+  - Noted that the tenant is temporary and will be torn down.
+- What happened (including errors): Nothing failed. This was a documentation change.
+- What I learned: Once the tenant is torn down, missing screenshots can't be retaken.
+- What I'd change next time: Capture every screenshot from the saved object before starting teardown.
+
+## 2026-09-30 - Runbooks from the lab steps
+
+Links: [runbooks](../runbooks/README.md) | [decision](../decisions/09-scope.md)
+
+- Time spent: Not recorded.
+- What I did: Wrote six runbooks (MFA re-registration, new starter, leaver, password reset, licence assignment failure, missing dynamic group member) in one layout, using the lab's own steps and screenshots.
+- What happened (including errors): Nothing was run. The new starter, leaver and password reset runbooks follow steps that were run. The MFA, licence and dynamic group runbooks describe faults that were not reproduced, and say so.
+- What I learned: A runbook written before an incident is a draft until someone follows it.
+- What I'd change next time: Run each fault once and capture the fix screenshots.

@@ -17,25 +17,26 @@ Intune admin center > Devices > Configuration > Create > New policy > Windows 10
 
 ## Evidence
 
+The settings page of the created profile (Edit profile, step 1 of 2):
+
+![Win-Config-Baseline settings](images/config-profile-settings.png)
+
+| Category | Setting | Value |
+| --- | --- | --- |
+| Experience (2 of 30 configured) | Allow Windows Spotlight (User) | Allow |
+| Experience | Allow Windows Consumer Features | **Allow** |
+| Local Policies Security Options (1 of 84 configured) | Interactive Logon Machine Inactivity Limit | 900 |
+
+The Review + create page from when the profile was made:
+
 ![Win-Config-Baseline review page](images/config-profile.png)
 
-The screenshot is the **Review + create** page, before the profile was created.
-
-| Item | Value shown |
-| --- | --- |
-| Name | Win-Config-Baseline |
-| Platform | Windows, Settings catalog |
-| Allow Windows Spotlight (User) | Allow |
-| Allow Windows Consumer Features | **Allow** |
-| Local Policies Security Options | Collapsed |
-| Scope tags | Default |
-| Included groups | **Empty** |
+It shows the same two Experience settings and an **empty** Included groups table.
 
 ## What this proves, and what it doesn't
 
-- **Consumer features are not turned off in this screenshot.** The setting reads Allow. The tutorial asked for Microsoft consumer experiences to be turned off. If the intent was to block them, this page says otherwise.
-- **The machine inactivity limit is not visible.** It sits in the collapsed Local Policies Security Options section, so 900 seconds is not shown.
-- **No group is assigned in this screenshot.** The Included groups table is empty, although the Assignments step has a green tick. `SG-All-Staff` is not shown.
-- It is the page before Create, so it does not prove the profile exists.
-
-To close this: open the created profile, check Properties and Assignments, and capture the inactivity limit, the consumer features setting and `SG-All-Staff`. If the settings are wrong, edit the profile and record the change.
+- The profile exists. The Edit profile page is only available for a saved profile.
+- **The machine inactivity limit is 900**, which is the 15 minutes planned.
+- **Consumer features are not turned off.** Allow Windows Consumer Features is set to Allow on the saved profile. The tutorial asked for Microsoft consumer experiences to be turned off. Either the setting was left on, or Allow is the wrong value for the intent. To turn them off, set it to Block or Disabled, whichever the picker offers, and record the change.
+- **The assignment to `SG-All-Staff` is still not shown.** The review page shows the Included groups table empty, and the settings page doesn't cover assignments. Open the profile's Properties > Assignments to show the group.
+- The review page is from before Create. It was taken as the profile was being made, and the settings page confirms it was created.

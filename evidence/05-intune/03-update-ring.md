@@ -19,7 +19,7 @@ Intune admin center > Devices > Windows updates > Update rings for Windows 10 an
 
 ![Win-Updates-Standard review page](images/update-ring.png)
 
-The screenshot is the **Review + create** page, before the ring was created.
+The screenshot is the **Review + create** page. The ring was created straight after, but no screenshot shows the saved ring.
 
 | Item | Value shown |
 | --- | --- |
@@ -39,5 +39,5 @@ The screenshot is the **Review + create** page, before the ring was created.
 - The quality deferral is 3 days, as planned.
 - **The 5 is a feature update deferral, not a deadline.** "Use deadline settings" is Not configured, so no deadline is set. The tutorial asked for a 5-day deadline.
 - **No assignment is visible.** `SG-All-Staff` does not appear in the screenshot.
-- It is the page before Create, so it does not prove the ring exists.
+- It is the Review + create page, so it shows the settings chosen, not the saved object. The ring being created is taken on trust, not shown.
 - Active hours, the update behaviour and the 10-day uninstall period were not chosen in the tutorial. I don't know whether they are Intune defaults or values I set.
