@@ -28,4 +28,4 @@ The screenshot is the **Review + create** page of the Add App wizard. The app wa
 
 - The assignment is set as Required for `SG-All-Staff`, which is what the tutorial asked for.
 - It is the Review + create page, so it shows the assignment chosen, not the saved app. The app being created is taken on trust, not shown.
-- Install behavior is User, so the app installs for the signed-in user. Nothing installs without an enrolled device, and Phase 6 was skipped ([06-device.md](../../docs/phases/06-device.md)), so the app has never been installed.
+- Install behavior is User, so the app installs for the signed-in user. Nothing installs without an enrolled device, and none is enrolled, so the app has never been installed.

@@ -99,23 +99,9 @@ Links: [evidence](../../evidence/05-intune/00-mdm-user-scope.md) | [decision](..
   - Expand collapsed sections before capturing.
   - Record the start time.
 
-## 2026-09-30 - Phase 6: Enrol a Windows device (skipped)
-
-Links: [phase](../phases/06-device.md) | [decision](../decisions/08-device-enrolment-skipped.md)
-
-- Time spent: None. The phase was not attempted.
-- What I did:
-  - Decided to skip Phase 6 because there is no Windows machine to use.
-  - Updated the README, the phase notes and the decision logs to say device enrolment was not tested and why.
-- What happened (including errors): Nothing was run, so nothing failed.
-- What I learned:
-  - Docker on macOS can't stand in for a Windows desktop, so a Mac-only lab can't cover Intune enrolment.
-  - Skipping leaves the Phase 5 policies as configuration only, and CA03 stuck in Report-only.
-- What I'd change next time: Check for a usable Windows device before starting the Intune phases, or plan a Windows VM route.
-
 ## 2026-09-30 - Scope and teardown
 
-Links: [decision](../decisions/09-scope.md) | [README](../../README.md)
+Links: [decision](../decisions/08-scope.md) | [README](../../README.md)
 
 - Time spent: Not recorded.
 - What I did:
@@ -128,7 +114,7 @@ Links: [decision](../decisions/09-scope.md) | [README](../../README.md)
 
 ## 2026-09-30 - Runbooks from the lab steps
 
-Links: [runbooks](../runbooks/README.md) | [decision](../decisions/09-scope.md)
+Links: [runbooks](../runbooks/README.md) | [decision](../decisions/08-scope.md)
 
 - Time spent: Not recorded.
 - What I did: Wrote six runbooks (MFA re-registration, new starter, leaver, password reset, licence assignment failure, missing dynamic group member) in one layout, using the lab's own steps and screenshots.

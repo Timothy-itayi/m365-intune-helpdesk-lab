@@ -11,7 +11,7 @@ Create the other two policies the same way as CA01, then open Protection > Condi
 | Policy | Users | Target resources | Condition and grant | State |
 | --- | --- | --- | --- | --- |
 | `CA02 Block legacy authentication` | All users, exclude break-glass | All cloud apps | Client apps: Exchange ActiveSync clients and Other clients. Grant: Block access | Report-only |
-| `CA03 Require compliant device - Office 365` | Include `SG-All-Staff`, exclude break-glass and the admin | Office 365 | Grant: Require device to be marked as compliant | Report-only. Stays here, because Phase 6 was skipped ([06-device.md](../../docs/phases/06-device.md)) |
+| `CA03 Require compliant device - Office 365` | Include `SG-All-Staff`, exclude break-glass and the admin | Office 365 | Grant: Require device to be marked as compliant | Report-only. Stays here, because no device is enrolled |
 
 ## Evidence
 

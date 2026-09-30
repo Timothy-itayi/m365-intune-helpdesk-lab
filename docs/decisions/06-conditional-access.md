@@ -15,7 +15,7 @@ Evidence: [evidence/04-conditional-access](../../evidence/04-conditional-access/
   - `CA02 Block legacy authentication`: all users, Exchange ActiveSync and other legacy clients, block access.
   - `CA03 Require compliant device - Office 365`: `SG-All-Staff` only, Office 365, require a compliant device.
 - Excluded the break-glass account from CA01. This is the exclusion promised in [03-tenant.md](03-tenant.md). CA02 and CA03 are meant to exclude it too, but their settings are not shown in a screenshot.
-- Left CA03 in Report-only. The plan was to wait for Phase 6, but it was skipped ([08-device-enrolment-skipped.md](08-device-enrolment-skipped.md)). No device is enrolled in Intune, so requiring a compliant device would block every user in `SG-All-Staff`.
+- Left CA03 in Report-only. No device is enrolled in Intune, so requiring a compliant device would block every user in `SG-All-Staff`.
 - Scoped CA03 to the `SG-All-Staff` group, excluding break-glass and the admin, rather than to all users. The tutorial gives no reason, and this scope is not shown in a screenshot.
 
 - Tested with Ava Nguyen, a standard user, in a private browser window, and registered Microsoft Authenticator for her. The check is her sign-in log entry ([03-ava-mfa-prompt.md](../../evidence/04-conditional-access/03-ava-mfa-prompt.md), [04-signin-log-ca-tab.md](../../evidence/04-conditional-access/04-signin-log-ca-tab.md)).

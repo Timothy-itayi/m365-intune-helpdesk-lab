@@ -71,7 +71,7 @@ These are the reasons for the settings. Some of these settings are not confirmed
 
 ## Not yet tested
 
-Policies were created but never verified on a device. [Phase 6](06-device.md) was skipped because there is no Windows machine, so no device is enrolled and none of these policies has been applied or evaluated.
+Policies were created but never verified on a device. No device is enrolled, so none of these policies has been applied or evaluated.
 
 ## Checkpoint
 

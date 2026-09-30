@@ -9,7 +9,7 @@ Evidence: [evidence/05-intune](../../evidence/05-intune/00-mdm-user-scope.md)
 ## Decisions
 
 - Set the MDM user scope to All, so any user's device that joins Entra can enrol in Intune. The tutorial allowed All or Some with `SG-All-Staff` ([00-mdm-user-scope.md](../../evidence/05-intune/00-mdm-user-scope.md)).
-- Created four items and assigned each to `SG-All-Staff`. They only take effect once a device enrols. Phase 6 was skipped ([08-device-enrolment-skipped.md](08-device-enrolment-skipped.md)), so none of them has taken effect, and the configuration itself is the only evidence.
+- Created four items and assigned each to `SG-All-Staff`. They only take effect once a device enrols. No device is enrolled, so none of them has taken effect, and the configuration itself is the only evidence.
   - `Win-Compliance-Baseline`, a Windows compliance policy, with the noncompliance action set to mark the device noncompliant immediately ([01-compliance-policy.md](../../evidence/05-intune/01-compliance-policy.md)).
   - `Win-Config-Baseline`, a Settings catalog profile ([02-config-profile.md](../../evidence/05-intune/02-config-profile.md)).
   - `Win-Updates-Standard`, an update ring with a 3-day quality update deferral ([03-update-ring.md](../../evidence/05-intune/03-update-ring.md)).

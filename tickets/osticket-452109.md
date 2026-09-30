@@ -1,8 +1,8 @@
 # osTicket #452109: Ben Carter unable to sign in
 
-Previous: [09-scope.md](../docs/decisions/09-scope.md)
+Previous: [08-scope.md](../docs/decisions/08-scope.md)
 
-This is the one sample ticket in the repo. Tickets are not the focus of this lab ([09-scope.md](../docs/decisions/09-scope.md)).
+This is the one sample ticket in the repo. Tickets are not the focus of this lab ([08-scope.md](../docs/decisions/08-scope.md)).
 
 ## Ticket
 

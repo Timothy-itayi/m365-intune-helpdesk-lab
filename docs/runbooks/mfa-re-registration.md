@@ -1,10 +1,10 @@
 # Runbook: User can't complete MFA (lost or replaced phone)
 
-Previous: [06-device.md](../phases/06-device.md)
+Previous: [08-scope.md](../decisions/08-scope.md)
 
 **Applies to:** Standard users  |  **Status:** Drafted, not yet run against a real incident  |  **Last tested:** Never
 
-This is the only runbook in the repo. Runbooks and tickets are not the focus of this lab ([09-scope.md](../decisions/09-scope.md)).
+Runbooks and tickets are not the focus of this lab ([08-scope.md](../decisions/08-scope.md)).
 
 The steps come from the Phase 7 tutorial. The screenshots below are from a normal MFA sign-in in [Phase 4](../phases/04-conditional-access.md), shown as examples of what each view looks like. They are not from a lost-phone incident, and none of them shows the fix.
 
