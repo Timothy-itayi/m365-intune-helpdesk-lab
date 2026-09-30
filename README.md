@@ -24,7 +24,7 @@ Each numbered file links to the one before it, so the trail reads in order from 
 | 1: Tenant | Written up | [01-tenant.md](docs/phases/01-tenant.md) | [01-tenant](evidence/01-tenant/00-Secure-first-admin.md) | [03-tenant.md](docs/decisions/03-tenant.md) |
 | 2: Groups | Written up | [02-groups.md](docs/phases/02-groups.md) | [02-groups](evidence/02-groups/00-dg-sales-rule.md) | [04-groups.md](docs/decisions/04-groups.md) |
 | 3: Scripts | Written up | [03-scripts.md](docs/phases/03-scripts.md), [scripts/](scripts/README.md) | [03-scripts](evidence/03-scripts/00-connect-mggraph.md) | [05-scripts.md](docs/decisions/05-scripts.md) |
-| 4: Conditional Access | Not started | | | |
+| 4: Conditional Access | In progress (4.1-4.3; enforcement not shown) | [04-conditional-access.md](docs/phases/04-conditional-access.md) | [04-conditional-access](evidence/04-conditional-access/00-security-defaults-off.md) | [06-conditional-access.md](docs/decisions/06-conditional-access.md) |
 | 5: Intune | Not started | | | |
 | 6: Device | Not started | | | |
 | 7: Incidents | In progress | [00-setup.md](docs/incidents/00-setup.md), [01-setup.md](docs/incidents/01-setup.md) | Screenshots in [00-setup](evidence/00-setup/00.md) and [01](evidence/00-setup/01.md) | Linked from each report |

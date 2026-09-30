@@ -51,3 +51,29 @@ Links: [evidence](../../evidence/00-setup/01.md) | [decision](../decisions/02-se
   - Pin a version tag, not `latest`.
   - Rebuild with `--no-cache --platform=linux/arm64` and confirm the label reads `linux/arm64`. Then mark the decision Accepted.
   - Use a build argument for the base tag if the image ever needs to build on x86.
+
+## 2026-09-30 - Phase 4: MFA and Conditional Access (in progress)
+
+Links: [evidence](../../evidence/04-conditional-access/00-security-defaults-off.md) | [decision](../decisions/06-conditional-access.md) | [phase](../phases/04-conditional-access.md)
+
+- Time spent: Not recorded. The policies were created between 11:26 and 11:31, and the last screenshots were saved at 11:54.
+- What I did:
+  - Disabled security defaults, replacing them with Conditional Access.
+  - Created CA01 (require MFA), CA02 (block legacy authentication) and CA03 (require compliant device, Office 365), all in Report-only.
+  - Excluded the break-glass account from CA01.
+  - Signed in as Ava Nguyen in a private window, registered Microsoft Authenticator, and looked up her sign-in in the Entra sign-in logs.
+- What happened (including errors):
+  - No errors. The policy list showed four Microsoft-managed policies already On, including MFA for all users and MFA for admins. I did not create them and have not opened them.
+  - The security defaults screenshot was taken before pressing Save, so the saved state is inferred.
+  - CA01's exclusion list holds only the break-glass account. The admin is not excluded.
+  - Ava was asked for MFA with a number-matching prompt. Her sign-in log shows an Enabled MFA policy named "Require multifactor authentication for all users", which is not CA01's name, so I can't say CA01 caused the prompt.
+  - The What If test and the enforce step (4.4) have no evidence yet. The Ava sign-in screenshot shows her IP address and suburb.
+- What I learned:
+  - Report-only policies enforce nothing. What is enforced now comes from the Microsoft-managed policies.
+  - The portal now labels "All cloud apps" as "All resources".
+- What I'd change next time:
+  - Screenshot after saving, and open the Grant panel so the control is visible.
+  - Open the Microsoft-managed policies and check their exclusions before relying on the break-glass account.
+  - Open the full Conditional Access tab for the sign-in so every evaluated policy is visible.
+  - Blur the IP address before screenshotting sign-in logs.
+  - Record the start time.
