@@ -8,5 +8,6 @@
 | [04-groups.md](04-groups.md) | Dynamic and assigned groups |
 | [05-scripts.md](05-scripts.md) | Graph sign-in, starter and leaver scripts |
 | [06-conditional-access.md](06-conditional-access.md) | Security defaults and Conditional Access policies (Report-only) |
+| [07-intune.md](07-intune.md) | MDM scope, compliance, configuration, update ring and app assignment |
 
 Related: [incidents](../incidents/00-setup.md)

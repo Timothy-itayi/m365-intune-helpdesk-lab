@@ -77,3 +77,25 @@ Links: [evidence](../../evidence/04-conditional-access/00-security-defaults-off.
   - Open the full Conditional Access tab for the sign-in so every evaluated policy is visible.
   - Blur the IP address before screenshotting sign-in logs.
   - Record the start time.
+
+## 2026-09-30 - Phase 5: Intune policies
+
+Links: [evidence](../../evidence/05-intune/00-mdm-user-scope.md) | [decision](../decisions/07-intune.md) | [phase](../phases/05-intune.md)
+
+- Time spent: Not recorded. The screenshots were saved at 12:17.
+- What I did:
+  - Set the MDM user scope to All.
+  - Created a compliance policy (`Win-Compliance-Baseline`), a Settings catalog profile (`Win-Config-Baseline`), an update ring (`Win-Updates-Standard`) and a Windows Terminal app assignment, all for `SG-All-Staff`.
+- What happened (including errors):
+  - Every screenshot shows the break-glass account signed in. It is the account used to read the Entra sign-in logs, and these pages were captured in the same session.
+  - The config profile, update ring and app screenshots are the Review + create page, before Create. The MDM scope screenshot was also taken before Save.
+  - The config profile shows Allow Windows Consumer Features = Allow and an empty assignment list. The inactivity limit is in a collapsed section, so it isn't visible.
+  - The update ring shows a 5-day feature update deferral and no deadline, where the plan said a 5-day deadline.
+  - The compliance policy screenshot doesn't show BitLocker, Secure Boot or Firewall.
+- What I learned:
+  - A wizard's Review + create page proves intent, not that the object exists.
+  - The tutorial's "deadline" and the update ring's "feature update deferral" are different settings.
+- What I'd change next time:
+  - Screenshot each object after saving, from its Properties and Assignments pages.
+  - Expand collapsed sections before capturing.
+  - Record the start time.
